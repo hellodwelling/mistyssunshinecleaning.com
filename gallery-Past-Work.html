@@ -256,13 +256,16 @@
                         })
                         .catch(result => {
                             console.log(result)
-                            alert("Please make sure to fill out each field")
+                            alert("There was a problem sending your text. Please reach out to ProPhone.")
                         })
 
                         setTimeout(() => {
+                            const sendTextModalId = document.getElementById("send-text-modal")
                             const modalId = document.getElementById("text-thank-you")
                             modalId.style.display = 'none';
-                            reload()
+                            if (sendTextModalId.style.display === 'none') {
+                                reload()
+                            }
                         }, 5000);
 
                         const reload = () => {
@@ -1614,7 +1617,7 @@
 
                 <!-- Form -->
 
-                <form class="overflow-y-scroll pb-20 sm:w-full">
+                <form class="overflow-y-auto pb-20 sm:w-full" onsubmit="send_sms('Mistys-Sunshine-Cleaning-LLC')">
                     <div class="flex-grow h-full overflow-x-hidden overflow-y-auto">
                         <div class="h-full px-6 pb-1 mt-6 space-y-6 sm:grid sm:grid-cols-2 sm:min-w-max sm:space-x-3">
                             <!-- Full Name -->
@@ -1636,6 +1639,7 @@
                             <div>
                                 <label for="contact-phone-number" class="sr-only">Phone Number</label>
                                 <input
+                                        required
                                         type="tel"
                                         name="phone-number"
                                         id="contact-phone-number"
@@ -1695,57 +1699,57 @@
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-183656"
-                                                    name="183656"
+                                                    id="contact-service-190107"
+                                                    name="190107"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Residential Cleaning"
                                             />
-                                            <label for="contact-label-service-183656" class="ml-3 text-sm font-medium text-gray-700">Residential Cleaning</label>
+                                            <label for="contact-label-service-190107" class="ml-3 text-sm font-medium text-gray-700">Residential Cleaning</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-183657"
-                                                    name="183657"
+                                                    id="contact-service-190108"
+                                                    name="190108"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Commercial Cleaning"
                                             />
-                                            <label for="contact-label-service-183657" class="ml-3 text-sm font-medium text-gray-700">Commercial Cleaning</label>
+                                            <label for="contact-label-service-190108" class="ml-3 text-sm font-medium text-gray-700">Commercial Cleaning</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-183658"
-                                                    name="183658"
+                                                    id="contact-service-190109"
+                                                    name="190109"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Move In / Move Out Cleaning"
                                             />
-                                            <label for="contact-label-service-183658" class="ml-3 text-sm font-medium text-gray-700">Move In / Move Out Cleaning</label>
+                                            <label for="contact-label-service-190109" class="ml-3 text-sm font-medium text-gray-700">Move In / Move Out Cleaning</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-183659"
-                                                    name="183659"
+                                                    id="contact-service-190110"
+                                                    name="190110"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Post-Construction Cleaning"
                                             />
-                                            <label for="contact-label-service-183659" class="ml-3 text-sm font-medium text-gray-700">Post-Construction Cleaning</label>
+                                            <label for="contact-label-service-190110" class="ml-3 text-sm font-medium text-gray-700">Post-Construction Cleaning</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-183660"
-                                                    name="183660"
+                                                    id="contact-service-190111"
+                                                    name="190111"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Bank Cleaning"
                                             />
-                                            <label for="contact-label-service-183660" class="ml-3 text-sm font-medium text-gray-700">Bank Cleaning</label>
+                                            <label for="contact-label-service-190111" class="ml-3 text-sm font-medium text-gray-700">Bank Cleaning</label>
                                         </div>
                                         
                                     </div>
@@ -1758,7 +1762,6 @@
                                 <div class='sm:flex-grow'>
                                     <label for="contact-concern" class="sr-only">How can we help you?</label>
                                     <textarea
-                                            required
                                             id="contact-concern"
                                             name="concern"
                                             rows="4"
@@ -1777,57 +1780,57 @@
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-183656"
-                                                    name="183656"
+                                                    id="contact-service-190107"
+                                                    name="190107"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Residential Cleaning"
                                             />
-                                            <label for="contact-label-service-183656" class="ml-3 text-sm font-medium text-gray-700">Residential Cleaning</label>
+                                            <label for="contact-label-service-190107" class="ml-3 text-sm font-medium text-gray-700">Residential Cleaning</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-183657"
-                                                    name="183657"
+                                                    id="contact-service-190108"
+                                                    name="190108"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Commercial Cleaning"
                                             />
-                                            <label for="contact-label-service-183657" class="ml-3 text-sm font-medium text-gray-700">Commercial Cleaning</label>
+                                            <label for="contact-label-service-190108" class="ml-3 text-sm font-medium text-gray-700">Commercial Cleaning</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-183658"
-                                                    name="183658"
+                                                    id="contact-service-190109"
+                                                    name="190109"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Move In / Move Out Cleaning"
                                             />
-                                            <label for="contact-label-service-183658" class="ml-3 text-sm font-medium text-gray-700">Move In / Move Out Cleaning</label>
+                                            <label for="contact-label-service-190109" class="ml-3 text-sm font-medium text-gray-700">Move In / Move Out Cleaning</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-183659"
-                                                    name="183659"
+                                                    id="contact-service-190110"
+                                                    name="190110"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Post-Construction Cleaning"
                                             />
-                                            <label for="contact-label-service-183659" class="ml-3 text-sm font-medium text-gray-700">Post-Construction Cleaning</label>
+                                            <label for="contact-label-service-190110" class="ml-3 text-sm font-medium text-gray-700">Post-Construction Cleaning</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-183660"
-                                                    name="183660"
+                                                    id="contact-service-190111"
+                                                    name="190111"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Bank Cleaning"
                                             />
-                                            <label for="contact-label-service-183660" class="ml-3 text-sm font-medium text-gray-700">Bank Cleaning</label>
+                                            <label for="contact-label-service-190111" class="ml-3 text-sm font-medium text-gray-700">Bank Cleaning</label>
                                         </div>
                                         
                                     </div>
@@ -1839,47 +1842,56 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="flex items-center justify-center w-full">
+                        <button     class="
+                                    py-2.5
+                                    w-4/5
+                                    fixed
+                                    bottom
+                                    text-sm
+                                    font-medium
+                                    transition
+                                    border-2 border-transparent
+                                    rounded-md
+                                    bg-primary
+                                    text-primary-foreground
+                                    focus:outline-none
+                                    hover:bg-primary-darker
+                                    bg-primar
+                                    focus-visible:ring-2
+                                    ring-primary ring-opacity-75 ring-offset-2"
+                                    style="
+                                    position:absolute;
+                                    left: 50%;
+                                    bottom: 0;
+                                    transform: translate(-50%, -50%);
+                                    margin-top: 0;
+                                    margin-bottom: 0">Send
+                        </button>
+                    </div>
                 </form>
-                <div class="flex
-                                items-center
-                                justify-center
-                                w-full
-                            "
-                     onclick="send_sms('Mistys-Sunshine-Cleaning-LLC')"
-                >
-                    <button class="
-                                py-2.5
-                                w-4/5
-                                fixed
-                                bottom
-                                text-sm
-                                font-medium
-                                transition
-                                border-2 border-transparent
-                                rounded-md
-                                bg-primary
-                                text-primary-foreground
-                                focus:outline-none
-                                hover:bg-primary-darker
-                                bg-primar
-                                focus-visible:ring-2
-                                ring-primary ring-opacity-75 ring-offset-2" 
-                                style="
-                                position:absolute;
-                                left: 50%;
-                                bottom: 0;
-                                transform: translate(-50%, -50%);
-                                margin-top: 0;
-                                margin-bottom: 0"> Send
-                    </button>
-                </div>
 
 
             </div>
         </div>
     </div>
 </template>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const inputs = Array.from(
+            document.querySelectorAll('input[name=email], input[name=phone-number]')
+        )
+
+        const inputListener = e => {
+            inputs
+                .filter(i => i !== e.target)
+                .forEach(i => (i.required = !e.target.value.length))
+        }
+
+        inputs.forEach(i => i.addEventListener('input', inputListener))
+    })
+</script>
 <div
 	class="fixed top-36 inset-x-0 z-50 mx-auto p-4 border w-96 shadow-lg rounded-md bg-white backdrop-blur-sm"
     id="text-thank-you"
